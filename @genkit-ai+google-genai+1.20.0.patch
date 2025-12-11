@@ -1,0 +1,26 @@
+diff --git a/node_modules/@genkit-ai/google-genai/dist/index.js b/node_modules/@genkit-ai/google-genai/dist/index.js
+index 51d48a3..f2d4e0e 100644
+--- a/node_modules/@genkit-ai/google-genai/dist/index.js
++++ b/node_modules/@genkit-ai/google-genai/dist/index.js
+@@ -484,10 +484,6 @@
+     generation_config.candidate_count = (_a = config === null || config === void 0 ? void 0 : config.candidates) !== null && _a !== void 0 ? _a : 1;
+     if (output) {
+         if (output.format === "json") {
+-            generation_config.response_mime_type = "application/json";
+-        }
+-        if (output.schema) {
+-            generation_config.response_schema = toJSONSchema(output.schema);
+         }
+     }
+     if (config === null || config === void 0 ? void 0 : config.stopSequences) {
+@@ -528,9 +524,6 @@
+     const generationConfig = (request.config || {});
+     if (request.output) {
+         if (request.output.format === "json") {
+-            generationConfig.response_mime_type = "application/json";
+-        }
+-        if (request.output.schema) {
+-            generationConfig.response_schema = toJSONSchema(request.output.schema);
+         }
+     }
+     const model = generative_ai_1.getGenerativeModel({
